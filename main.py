@@ -2,10 +2,12 @@ from fastapi import FastAPI
 import random
 app = FastAPI()
 
-@app.get("/")
+# Alterando os nomes dos endpoints
+@app.get("/helloworld")
 async def root():
     return{"messsage": "Hello World"}
 
-@app.get("/teste")
+
+@app.get("/funcaoteste")
 async def funcaoteste():
     return{"teste": True, "num_aleatorio": random.randint(0, 1000)}
